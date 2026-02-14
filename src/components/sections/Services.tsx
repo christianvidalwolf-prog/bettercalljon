@@ -7,12 +7,12 @@ import Image from "next/image";
 const services = [
     {
         icon: (
-            <div className="relative w-10 h-10 overflow-hidden">
+            <div className="relative w-16 h-16 overflow-hidden">
                 <Image
                     src="/icons/tour-manager.png"
                     alt="Tour Manager Icon"
                     fill
-                    className="object-contain"
+                    className="object-contain scale-125"
                 />
             </div>
         ),
@@ -24,12 +24,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-10 h-10 overflow-hidden">
+            <div className="relative w-16 h-16 overflow-hidden">
                 <Image
                     src="/icons/estadios.png"
                     alt="Estadios Icon"
                     fill
-                    className="object-contain"
+                    className="object-contain scale-125"
                 />
             </div>
         ),
@@ -144,7 +144,7 @@ export function Services() {
 
                             {/* Icon */}
                             <div
-                                className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${service.accent} text-white mb-6 group-hover:scale-110 transition-transform duration-500`}
+                                className={`inline-flex items-center justify-center w-24 h-24 rounded-xl bg-gradient-to-br ${service.accent} text-white mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
                             >
                                 {service.icon}
                             </div>
