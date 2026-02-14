@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 type Tier = "tour-manager" | "estadios" | "festivales";
 
@@ -163,19 +164,29 @@ export function HallOfFame() {
                                         className={`absolute inset-0 bg-gradient-to-br ${accentColors[activeTier]} opacity-0 group-hover:opacity-[0.12] transition-opacity duration-500`}
                                     />
 
-                                    {/* Name Initial */}
+                                    {/* Name Initial / Icon */}
                                     <div
-                                        className={`w-20 h-20 rounded-full bg-gradient-to-br ${accentColors[activeTier]} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
+                                        className={`w-24 h-24 rounded-full ${activeTier === "tour-manager" ? "bg-transparent" : `bg-gradient-to-br ${accentColors[activeTier]}`} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 ${activeTier !== "tour-manager" && "shadow-lg"}`}
                                     >
-                                        <span
-                                            className="text-3xl font-bold text-white drop-shadow-lg"
-                                            style={{
-                                                fontFamily: "var(--font-family-display)",
-                                                textShadow: "0 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.2)"
-                                            }}
-                                        >
-                                            {artist.name.charAt(0)}
-                                        </span>
+                                        {activeTier === "tour-manager" ? (
+                                            <Image
+                                                src="/icons/tour-manager.png"
+                                                alt="Tour Manager"
+                                                width={96}
+                                                height={96}
+                                                className="w-full h-full object-contain drop-shadow-2xl"
+                                            />
+                                        ) : (
+                                            <span
+                                                className="text-3xl font-bold text-white drop-shadow-lg"
+                                                style={{
+                                                    fontFamily: "var(--font-family-display)",
+                                                    textShadow: "0 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.2)"
+                                                }}
+                                            >
+                                                {artist.name.charAt(0)}
+                                            </span>
+                                        )}
                                     </div>
 
                                     {/* Name */}
