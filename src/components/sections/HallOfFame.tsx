@@ -166,19 +166,19 @@ export function HallOfFame() {
 
                                     {/* Name Initial / Icon */}
                                     <div
-                                        className={`w-24 h-24 rounded-full ${activeTier === "tour-manager" ? "bg-transparent" : `bg-gradient-to-br ${accentColors[activeTier]}`} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 ${activeTier !== "tour-manager" && "shadow-lg"}`}
+                                        className={`w-32 h-32 rounded-full ${activeTier === "tour-manager" ? "bg-transparent p-0" : `bg-gradient-to-br ${accentColors[activeTier]}`} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 ${activeTier !== "tour-manager" && "shadow-lg"}`}
                                     >
                                         {activeTier === "tour-manager" ? (
                                             <Image
                                                 src="/icons/tour-manager.png"
                                                 alt="Tour Manager"
-                                                width={96}
-                                                height={96}
-                                                className="w-full h-full object-contain drop-shadow-2xl"
+                                                width={140}
+                                                height={140}
+                                                className="w-[140px] h-[140px] object-contain drop-shadow-2xl scale-110"
                                             />
                                         ) : (
                                             <span
-                                                className="text-3xl font-bold text-white drop-shadow-lg"
+                                                className="text-4xl font-bold text-white drop-shadow-lg"
                                                 style={{
                                                     fontFamily: "var(--font-family-display)",
                                                     textShadow: "0 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.2)"
