@@ -8,13 +8,13 @@ const sanitizedString = (minLength: number, maxLength: number) =>
         .max(maxLength, `Máximo ${maxLength} caracteres`)
         .transform(sanitizeInput);
 
-const serviceValues = {
-    "tour-manager": "tour-manager",
-    "produccion-estadios": "produccion-estadios",
-    "logistica-festivales": "logistica-festivales",
-    "merchandising": "merchandising",
-    "vehiculos": "vehiculos",
-} as const;
+const serviceValues = [
+    "tour-manager",
+    "produccion-estadios",
+    "logistica-festivales",
+    "merchandising",
+    "vehiculos",
+] as const;
 
 export const contactSchema = z.object({
     name: sanitizedString(2, 100),
@@ -31,7 +31,7 @@ export const contactSchema = z.object({
         .or(z.literal(""))
         .transform((v) => (v ? sanitizeInput(v) : "")),
     service: z.enum(serviceValues, {
-        error: "Selecciona un servicio",
+        errorMap: () => ({ message: "Selecciona un servicio" }),
     }),
     message: sanitizedString(10, 2000),
 });
