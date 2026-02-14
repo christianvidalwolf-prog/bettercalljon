@@ -82,7 +82,7 @@ export function HallOfFame() {
                     className="text-center mb-12 md:mb-16"
                 >
                     <p className="text-sm uppercase tracking-[0.3em] text-stage-cyan mb-4 font-medium">
-                        El Archivo
+                        Hall of Fame
                     </p>
                     <h2
                         className="text-3xl sm:text-4xl md:text-5xl font-bold"

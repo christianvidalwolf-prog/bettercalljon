@@ -6,7 +6,7 @@ import clsx from "clsx";
 
 const navLinks = [
     { href: "#servicios", label: "Servicios" },
-    { href: "#archivo", label: "Archivo" },
+    { href: "#archivo", label: "Hall of Fame" },
     { href: "#contacto", label: "Contacto" },
 ];
 
