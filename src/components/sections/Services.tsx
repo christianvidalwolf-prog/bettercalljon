@@ -41,12 +41,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
+            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-xl">
                 <Image
                     src="/icons/festivales.png"
                     alt="Festivales Icon"
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover rounded-xl scale-105"
                 />
             </div>
         ),
