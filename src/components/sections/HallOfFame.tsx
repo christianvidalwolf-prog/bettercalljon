@@ -166,12 +166,20 @@ export function HallOfFame() {
 
                                     {/* Name Initial / Icon */}
                                     <div
-                                        className={`w-32 h-32 rounded-full ${activeTier === "tour-manager" ? "bg-transparent p-0" : `bg-gradient-to-br ${accentColors[activeTier]}`} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 ${activeTier !== "tour-manager" && "shadow-lg"}`}
+                                        className={`w-32 h-32 rounded-full ${activeTier === "tour-manager" || activeTier === "estadios" ? "bg-transparent p-0" : `bg-gradient-to-br ${accentColors[activeTier]}`} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 ${activeTier !== "tour-manager" && activeTier !== "estadios" && "shadow-lg"}`}
                                     >
                                         {activeTier === "tour-manager" ? (
                                             <Image
                                                 src="/icons/tour-manager.png"
                                                 alt="Tour Manager"
+                                                width={140}
+                                                height={140}
+                                                className="w-[140px] h-[140px] object-contain drop-shadow-2xl scale-110"
+                                            />
+                                        ) : activeTier === "estadios" ? (
+                                            <Image
+                                                src="/icons/estadios.png"
+                                                alt="Estadios"
                                                 width={140}
                                                 height={140}
                                                 className="w-[140px] h-[140px] object-contain drop-shadow-2xl scale-110"
