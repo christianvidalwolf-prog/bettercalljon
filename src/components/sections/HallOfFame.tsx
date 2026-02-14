@@ -165,11 +165,14 @@ export function HallOfFame() {
 
                                     {/* Name Initial */}
                                     <div
-                                        className={`w-20 h-20 rounded-full bg-gradient-to-br ${accentColors[activeTier]} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}
+                                        className={`w-20 h-20 rounded-full bg-gradient-to-br ${accentColors[activeTier]} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
                                     >
                                         <span
-                                            className="text-3xl font-bold text-white"
-                                            style={{ fontFamily: "var(--font-family-display)" }}
+                                            className="text-3xl font-bold text-white drop-shadow-lg"
+                                            style={{
+                                                fontFamily: "var(--font-family-display)",
+                                                textShadow: "0 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.2)"
+                                            }}
                                         >
                                             {artist.name.charAt(0)}
                                         </span>
