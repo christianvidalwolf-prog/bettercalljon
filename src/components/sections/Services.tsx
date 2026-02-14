@@ -7,12 +7,12 @@ import Image from "next/image";
 const services = [
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden">
+            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
                 <Image
                     src="/icons/tour-manager.png"
                     alt="Tour Manager Icon"
                     fill
-                    className="object-contain"
+                    className="object-cover rounded-lg"
                 />
             </div>
         ),
@@ -24,12 +24,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden">
+            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
                 <Image
                     src="/icons/estadios.png"
                     alt="Estadios Icon"
                     fill
-                    className="object-contain"
+                    className="object-cover rounded-lg"
                 />
             </div>
         ),
@@ -41,12 +41,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden">
+            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
                 <Image
                     src="/icons/festivales.png"
                     alt="Festivales Icon"
                     fill
-                    className="object-contain"
+                    className="object-cover rounded-lg"
                 />
             </div>
         ),
@@ -58,12 +58,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden">
+            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
                 <Image
                     src="/icons/merchandising.png"
                     alt="Merchandising Icon"
                     fill
-                    className="object-contain"
+                    className="object-cover rounded-lg"
                 />
             </div>
         ),
