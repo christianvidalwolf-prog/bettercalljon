@@ -218,29 +218,29 @@ export function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 2.2 }}
-                    className="mt-16 md:mt-20 flex items-center justify-center gap-6 text-stage-muted text-sm"
+                    className="mt-16 md:mt-20 flex flex-wrap items-center justify-center gap-y-6 gap-x-4 sm:gap-12 text-stage-muted text-sm px-2 sm:px-0"
                 >
-                    <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-stage-white">15+</span>
-                        <span className="text-xs leading-tight text-left">
+                    <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-xl sm:text-2xl font-bold text-stage-white">15+</span>
+                        <span className="text-[10px] sm:text-xs leading-tight text-left">
                             años de
                             <br />
                             experiencia
                         </span>
                     </div>
-                    <div className="w-px h-8 bg-dark-border" />
-                    <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-stage-white">500+</span>
-                        <span className="text-xs leading-tight text-left">
+                    <div className="hidden sm:block w-px h-8 bg-dark-border" />
+                    <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-xl sm:text-2xl font-bold text-stage-white">500+</span>
+                        <span className="text-[10px] sm:text-xs leading-tight text-left">
                             eventos
                             <br />
                             gestionados
                         </span>
                     </div>
-                    <div className="w-px h-8 bg-dark-border" />
-                    <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-stage-white">BCN</span>
-                        <span className="text-xs leading-tight text-left">
+                    <div className="hidden sm:block w-px h-8 bg-dark-border" />
+                    <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-xl sm:text-2xl font-bold text-stage-white">BCN</span>
+                        <span className="text-[10px] sm:text-xs leading-tight text-left">
                             Barcelona
                             <br />
                             headquarters

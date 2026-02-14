@@ -7,12 +7,12 @@ import Image from "next/image";
 const services = [
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
+            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
                 <Image
                     src="/icons/tour-manager.png"
                     alt="Tour Manager Icon"
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover"
                 />
             </div>
         ),
@@ -24,12 +24,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
+            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
                 <Image
                     src="/icons/estadios.png"
                     alt="Estadios Icon"
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover"
                 />
             </div>
         ),
@@ -41,12 +41,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-xl bg-orange-600">
+            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
                 <Image
                     src="/icons/festivales.png"
                     alt="Festivales Icon"
                     fill
-                    className="object-cover rounded-xl"
+                    className="object-cover"
                 />
             </div>
         ),
@@ -58,12 +58,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
+            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
                 <Image
                     src="/icons/merchandising.png"
                     alt="Merchandising Icon"
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover"
                 />
             </div>
         ),
@@ -75,12 +75,12 @@ const services = [
     },
     {
         icon: (
-            <div className="relative w-[88px] h-[88px] overflow-hidden rounded-lg">
+            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
                 <Image
                     src="/icons/vehiculos.png"
                     alt="Vehiculos Icon"
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover"
                 />
             </div>
         ),
