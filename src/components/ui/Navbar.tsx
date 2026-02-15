@@ -2,19 +2,22 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useTranslations } from "next-intl";
 import clsx from "clsx";
-
-const navLinks = [
-    { href: "#servicios", label: "Servicios" },
-    { href: "#archivo", label: "Hall of Fame" },
-    { href: "#contacto", label: "Contacto" },
-];
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Navbar() {
     const [isVisible, setIsVisible] = useState(true);
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const { scrollY } = useScroll();
+    const t = useTranslations("nav");
+
+    const navLinks = [
+        { href: "#servicios", label: t("services") },
+        { href: "#archivo", label: t("hallOfFame") },
+        { href: "#contacto", label: t("contact") },
+    ];
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious() ?? 0;
@@ -72,11 +75,12 @@ export function Navbar() {
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-stage-magenta transition-all duration-300 group-hover:w-full" />
                             </a>
                         ))}
+                        <LanguageSwitcher />
                         <a
                             href="#contacto"
                             className="px-5 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-stage-magenta to-stage-cyan text-white hover:shadow-[0_0_24px_rgba(224,64,251,0.4)] transition-all duration-300 hover:scale-105"
                         >
-                            Hablemos
+                            {t("cta")}
                         </a>
                     </div>
 
@@ -84,7 +88,7 @@ export function Navbar() {
                     <button
                         onClick={() => setMobileOpen(!mobileOpen)}
                         className="md:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
-                        aria-label="Abrir menú"
+                        aria-label={t("openMenu")}
                     >
                         <span
                             className={clsx(
@@ -127,12 +131,13 @@ export function Navbar() {
                         {link.label}
                     </a>
                 ))}
+                <LanguageSwitcher />
                 <a
                     href="#contacto"
                     onClick={() => setMobileOpen(false)}
                     className="mt-4 px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-stage-magenta to-stage-cyan text-white"
                 >
-                    Hablemos
+                    {t("cta")}
                 </a>
             </motion.div>
         </>

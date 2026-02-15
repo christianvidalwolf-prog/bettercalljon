@@ -1,5 +1,16 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 export function Footer() {
     const currentYear = new Date().getFullYear();
+    const t = useTranslations("footer");
+
+    const navLinks = [
+        { href: "#servicios", label: t("services") },
+        { href: "#archivo", label: t("hallOfFame") },
+        { href: "#contacto", label: t("contactTitle") },
+    ];
 
     return (
         <footer className="border-t border-dark-border bg-dark-surface/50">
@@ -14,22 +25,17 @@ export function Footer() {
                             <span className="gradient-text">Better Call</span> Jon
                         </h3>
                         <p className="text-sm text-stage-muted max-w-xs">
-                            Tour Management, producción de estadios y logística de festivales.
-                            Barcelona.
+                            {t("description")}
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
                         <h4 className="text-sm font-semibold text-stage-white mb-4 uppercase tracking-wider">
-                            Navegación
+                            {t("navigation")}
                         </h4>
                         <ul className="space-y-2">
-                            {[
-                                { href: "#servicios", label: "Servicios" },
-                                { href: "#archivo", label: "Hall of Fame" },
-                                { href: "#contacto", label: "Contacto" },
-                            ].map((link) => (
+                            {navLinks.map((link) => (
                                 <li key={link.href}>
                                     <a
                                         href={link.href}
@@ -45,10 +51,10 @@ export function Footer() {
                     {/* Contact */}
                     <div>
                         <h4 className="text-sm font-semibold text-stage-white mb-4 uppercase tracking-wider">
-                            Contacto
+                            {t("contactTitle")}
                         </h4>
                         <ul className="space-y-2 text-sm text-stage-muted">
-                            <li>Barcelona, España</li>
+                            <li>{t("location")}</li>
                             <li>
                                 <a
                                     href="mailto:info@bettercalljon.com"
@@ -64,10 +70,10 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-12 pt-8 border-t border-dark-border flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-stage-muted">
-                        © {currentYear} Better Call Jon. Todos los derechos reservados.
+                        {t("copyright", { year: currentYear })}
                     </p>
                     <p className="text-xs text-stage-muted">
-                        ¡Nunca problemas, sólo soluciones!
+                        {t("mantra")}
                     </p>
                 </div>
             </div>

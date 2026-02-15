@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 interface Service {
     slug: string;
@@ -21,6 +22,7 @@ interface ServicesProps {
 export function Services({ services }: ServicesProps) {
     const sectionRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+    const t = useTranslations("services");
 
     return (
         <section
@@ -46,18 +48,17 @@ export function Services({ services }: ServicesProps) {
                     className="text-center mb-16 md:mb-20"
                 >
                     <p className="text-sm uppercase tracking-[0.3em] text-stage-magenta mb-4 font-medium">
-                        El Arsenal
+                        {t("tagline")}
                     </p>
                     <h2
                         className="text-3xl sm:text-4xl md:text-5xl font-bold"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
-                        Nuestros{" "}
-                        <span className="gradient-text">Servicios</span>
+                        {t("title")}{" "}
+                        <span className="gradient-text">{t("titleHighlight")}</span>
                     </h2>
                     <p className="mt-4 text-stage-muted max-w-2xl mx-auto">
-                        Cinco pilares de excelencia operativa que cubren cada aspecto de tu
-                        producción en vivo.
+                        {t("subtitle")}
                     </p>
                 </motion.div>
 
@@ -113,7 +114,7 @@ export function Services({ services }: ServicesProps) {
 
                                 {/* Arrow */}
                                 <div className="mt-6 flex items-center gap-2 text-sm font-medium text-stage-muted group-hover:text-stage-cyan transition-colors">
-                                    <span>Más información</span>
+                                    <span>{t("moreInfo")}</span>
                                     <svg
                                         className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                         fill="none"

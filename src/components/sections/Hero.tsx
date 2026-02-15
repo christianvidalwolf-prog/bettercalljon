@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 function ParticleCanvas() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -106,7 +107,9 @@ export function Hero() {
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-    const headlineWords = "La solución a todos los problemas de tu gira".split(" ");
+    const t = useTranslations("hero");
+    const headlineWords = t("headline").split(" ");
+    const highlightWords = t.raw("highlightWords") as string[];
 
     return (
         <section
@@ -147,7 +150,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-sm md:text-base uppercase tracking-[0.3em] text-stage-magenta mb-6 md:mb-8 font-medium"
                 >
-                    Tour Management · Producción · Logística
+                    {t("tagline")}
                 </motion.p>
 
                 {/* Headline */}
@@ -167,7 +170,7 @@ export function Hero() {
                             }}
                             className="inline-block mr-[0.3em]"
                         >
-                            {word === "solución" || word === "gira" ? (
+                            {highlightWords.includes(word) ? (
                                 <span className="gradient-text">{word}</span>
                             ) : (
                                 word
@@ -183,7 +186,7 @@ export function Hero() {
                     transition={{ duration: 0.8, delay: 1.4 }}
                     className="text-lg md:text-xl lg:text-2xl text-stage-muted mb-10 md:mb-12 italic"
                 >
-                    ¡Nunca problemas, sólo soluciones!
+                    {t("mantra")}
                 </motion.p>
 
                 {/* CTA */}
@@ -196,7 +199,7 @@ export function Hero() {
                         href="#contacto"
                         className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-stage-magenta to-stage-cyan text-white hover:shadow-[0_0_40px_rgba(224,64,251,0.5)] transition-all duration-500 hover:scale-105 animate-pulse-glow"
                     >
-                        Hablemos
+                        {t("cta")}
                         <svg
                             className="w-5 h-5"
                             fill="none"
@@ -221,29 +224,23 @@ export function Hero() {
                     className="mt-16 md:mt-20 flex flex-wrap items-center justify-center gap-y-6 gap-x-4 sm:gap-12 text-stage-muted text-sm px-2 sm:px-0"
                 >
                     <div className="flex items-center gap-2 shrink-0">
-                        <span className="text-xl sm:text-2xl font-bold text-stage-white">15+</span>
-                        <span className="text-[10px] sm:text-xs leading-tight text-left">
-                            años de
-                            <br />
-                            experiencia
+                        <span className="text-xl sm:text-2xl font-bold text-stage-white">{t("yearsValue")}</span>
+                        <span className="text-[10px] sm:text-xs leading-tight text-left whitespace-pre-line">
+                            {t("yearsLabel")}
                         </span>
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-dark-border" />
                     <div className="flex items-center gap-2 shrink-0">
-                        <span className="text-xl sm:text-2xl font-bold text-stage-white">500+</span>
-                        <span className="text-[10px] sm:text-xs leading-tight text-left">
-                            eventos
-                            <br />
-                            gestionados
+                        <span className="text-xl sm:text-2xl font-bold text-stage-white">{t("eventsValue")}</span>
+                        <span className="text-[10px] sm:text-xs leading-tight text-left whitespace-pre-line">
+                            {t("eventsLabel")}
                         </span>
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-dark-border" />
                     <div className="flex items-center gap-2 shrink-0">
-                        <span className="text-xl sm:text-2xl font-bold text-stage-white">BCN</span>
-                        <span className="text-[10px] sm:text-xs leading-tight text-left">
-                            Barcelona
-                            <br />
-                            headquarters
+                        <span className="text-xl sm:text-2xl font-bold text-stage-white">{t("locationValue")}</span>
+                        <span className="text-[10px] sm:text-xs leading-tight text-left whitespace-pre-line">
+                            {t("locationLabel")}
                         </span>
                     </div>
                 </motion.div>
@@ -258,7 +255,7 @@ export function Hero() {
             >
                 <div className="animate-bounce-slow flex flex-col items-center gap-2">
                     <span className="text-xs text-stage-muted uppercase tracking-widest">
-                        Scroll
+                        {t("scroll")}
                     </span>
                     <svg
                         className="w-5 h-5 text-stage-magenta"

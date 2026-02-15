@@ -2,11 +2,8 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-    contactSchema,
-    serviceOptions,
-    type ContactFormData,
-} from "@/lib/schemas/contact";
+import { useTranslations } from "next-intl";
+import { contactSchema, type ContactFormData } from "@/lib/schemas/contact";
 
 type FormState =
     | { status: "idle" }
@@ -15,10 +12,19 @@ type FormState =
     | { status: "error"; message: string }
     | { status: "validation"; errors: Record<string, string> };
 
+const serviceValues = [
+    { value: "tour-manager", key: "tourManager" },
+    { value: "produccion-estadios", key: "stadiumProduction" },
+    { value: "logistica-festivales", key: "festivalLogistics" },
+    { value: "merchandising", key: "merchandising" },
+    { value: "vehiculos", key: "vehicles" },
+] as const;
+
 export function Contact() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
     const [formState, setFormState] = useState<FormState>({ status: "idle" });
+    const t = useTranslations("contact");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -34,7 +40,6 @@ export function Contact() {
             message: formData.get("message") as string,
         };
 
-        // Client-side validation
         const result = contactSchema.safeParse(raw);
         if (!result.success) {
             const errors: Record<string, string> = {};
@@ -56,7 +61,7 @@ export function Contact() {
             if (!res.ok) {
                 setFormState({
                     status: "error",
-                    message: "Error al enviar. Inténtalo de nuevo.",
+                    message: t("errors.submitError"),
                 });
                 return;
             }
@@ -66,7 +71,7 @@ export function Contact() {
         } catch {
             setFormState({
                 status: "error",
-                message: "Error de conexión. Inténtalo de nuevo.",
+                message: t("errors.connectionError"),
             });
         }
     };
@@ -104,17 +109,16 @@ export function Contact() {
                     className="text-center mb-12 md:mb-16"
                 >
                     <p className="text-sm uppercase tracking-[0.3em] text-stage-amber mb-4 font-medium">
-                        Centro de Mando
+                        {t("tagline")}
                     </p>
                     <h2
                         className="text-3xl sm:text-4xl md:text-5xl font-bold"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
-                        <span className="gradient-text">Hablemos</span>
+                        <span className="gradient-text">{t("title")}</span>
                     </h2>
                     <p className="mt-4 text-stage-muted max-w-xl mx-auto">
-                        ¿Tienes un proyecto en mente? Cuéntanos los detalles y te
-                        responderemos en menos de 24 horas.
+                        {t("subtitle")}
                     </p>
                 </motion.div>
 
@@ -150,16 +154,16 @@ export function Contact() {
                                 className="text-2xl font-bold mb-2"
                                 style={{ fontFamily: "var(--font-family-display)" }}
                             >
-                                ¡Mensaje enviado!
+                                {t("success.title")}
                             </h3>
                             <p className="text-stage-muted">
-                                Te contactaremos lo antes posible.
+                                {t("success.message")}
                             </p>
                             <button
                                 onClick={() => setFormState({ status: "idle" })}
                                 className="mt-6 text-sm text-stage-cyan hover:underline"
                             >
-                                Enviar otro mensaje
+                                {t("success.sendAnother")}
                             </button>
                         </motion.div>
                     ) : (
@@ -171,14 +175,14 @@ export function Contact() {
                                         htmlFor="contact-name"
                                         className="block text-sm font-medium text-stage-muted mb-2"
                                     >
-                                        Nombre *
+                                        {t("form.name")}
                                     </label>
                                     <input
                                         id="contact-name"
                                         name="name"
                                         type="text"
                                         required
-                                        placeholder="Tu nombre"
+                                        placeholder={t("form.namePlaceholder")}
                                         className={inputClasses("name")}
                                     />
                                     {getError("name") && (
@@ -194,14 +198,14 @@ export function Contact() {
                                         htmlFor="contact-company"
                                         className="block text-sm font-medium text-stage-muted mb-2"
                                     >
-                                        Empresa *
+                                        {t("form.company")}
                                     </label>
                                     <input
                                         id="contact-company"
                                         name="company"
                                         type="text"
                                         required
-                                        placeholder="Nombre de la empresa"
+                                        placeholder={t("form.companyPlaceholder")}
                                         className={inputClasses("company")}
                                     />
                                     {getError("company") && (
@@ -217,14 +221,14 @@ export function Contact() {
                                         htmlFor="contact-email"
                                         className="block text-sm font-medium text-stage-muted mb-2"
                                     >
-                                        Email *
+                                        {t("form.email")}
                                     </label>
                                     <input
                                         id="contact-email"
                                         name="email"
                                         type="email"
                                         required
-                                        placeholder="tu@email.com"
+                                        placeholder={t("form.emailPlaceholder")}
                                         className={inputClasses("email")}
                                     />
                                     {getError("email") && (
@@ -240,13 +244,13 @@ export function Contact() {
                                         htmlFor="contact-phone"
                                         className="block text-sm font-medium text-stage-muted mb-2"
                                     >
-                                        Teléfono
+                                        {t("form.phone")}
                                     </label>
                                     <input
                                         id="contact-phone"
                                         name="phone"
                                         type="tel"
-                                        placeholder="+34 600 000 000"
+                                        placeholder={t("form.phonePlaceholder")}
                                         className={inputClasses("phone")}
                                     />
                                     {getError("phone") && (
@@ -263,7 +267,7 @@ export function Contact() {
                                     htmlFor="contact-service"
                                     className="block text-sm font-medium text-stage-muted mb-2"
                                 >
-                                    Servicio *
+                                    {t("form.service")}
                                 </label>
                                 <select
                                     id="contact-service"
@@ -273,11 +277,11 @@ export function Contact() {
                                     defaultValue=""
                                 >
                                     <option value="" disabled>
-                                        Selecciona un servicio
+                                        {t("form.servicePlaceholder")}
                                     </option>
-                                    {serviceOptions.map((opt) => (
+                                    {serviceValues.map((opt) => (
                                         <option key={opt.value} value={opt.value}>
-                                            {opt.label}
+                                            {t(`serviceOptions.${opt.key}`)}
                                         </option>
                                     ))}
                                 </select>
@@ -294,14 +298,14 @@ export function Contact() {
                                     htmlFor="contact-message"
                                     className="block text-sm font-medium text-stage-muted mb-2"
                                 >
-                                    Mensaje *
+                                    {t("form.message")}
                                 </label>
                                 <textarea
                                     id="contact-message"
                                     name="message"
                                     required
                                     rows={5}
-                                    placeholder="Cuéntanos sobre tu proyecto..."
+                                    placeholder={t("form.messagePlaceholder")}
                                     className={`${inputClasses("message")} resize-none`}
                                 />
                                 {getError("message") && (
@@ -349,10 +353,10 @@ export function Contact() {
                                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
                                             />
                                         </svg>
-                                        Enviando...
+                                        {t("form.submitting")}
                                     </span>
                                 ) : (
-                                    "Enviar mensaje"
+                                    t("form.submit")
                                 )}
                             </button>
                         </form>

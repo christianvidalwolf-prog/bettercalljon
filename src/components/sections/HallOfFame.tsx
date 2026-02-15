@@ -3,37 +3,38 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type Tier = "tour-manager" | "estadios" | "festivales";
 
 interface Artist {
     name: string;
-    role?: string;
+    roleKey: string;
 }
 
-const tiers: Record<Tier, { label: string; artists: Artist[] }> = {
+const tiersData: Record<Tier, { labelKey: string; artists: Artist[] }> = {
     "tour-manager": {
-        label: "Tour Manager",
+        labelKey: "tourManager",
         artists: [
-            { name: "Nick Lowe", role: "Tour Manager" },
-            { name: "The Lemon Twigs", role: "Tour Manager" },
+            { name: "Nick Lowe", roleKey: "tourManager" },
+            { name: "The Lemon Twigs", roleKey: "tourManager" },
         ],
     },
     estadios: {
-        label: "Estadios",
+        labelKey: "stadiums",
         artists: [
-            { name: "Coldplay", role: "Producción" },
-            { name: "Bruce Springsteen", role: "Producción" },
-            { name: "Metallica", role: "Producción" },
-            { name: "Rosalía", role: "Producción" },
+            { name: "Coldplay", roleKey: "production" },
+            { name: "Bruce Springsteen", roleKey: "production" },
+            { name: "Metallica", roleKey: "production" },
+            { name: "Rosalía", roleKey: "production" },
         ],
     },
     festivales: {
-        label: "Festivales",
+        labelKey: "festivals",
         artists: [
-            { name: "Primavera Sound", role: "Logística" },
-            { name: "Sónar", role: "Logística" },
-            { name: "Cruïlla", role: "Logística" },
+            { name: "Primavera Sound", roleKey: "logistics" },
+            { name: "Sónar", roleKey: "logistics" },
+            { name: "Cruïlla", roleKey: "logistics" },
         ],
     },
 };
@@ -56,8 +57,9 @@ export function HallOfFame() {
     const [activeTier, setActiveTier] = useState<Tier>("estadios");
     const sectionRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+    const t = useTranslations("hallOfFame");
 
-    const currentTier = tiers[activeTier];
+    const currentTier = tiersData[activeTier];
 
     return (
         <section
@@ -83,18 +85,17 @@ export function HallOfFame() {
                     className="text-center mb-12 md:mb-16"
                 >
                     <p className="text-sm uppercase tracking-[0.3em] text-stage-cyan mb-4 font-medium">
-                        Hall of Fame
+                        {t("tagline")}
                     </p>
                     <h2
                         className="text-3xl sm:text-4xl md:text-5xl font-bold"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
-                        Salón de la{" "}
-                        <span className="gradient-text">Fama</span>
+                        {t("title")}{" "}
+                        <span className="gradient-text">{t("titleHighlight")}</span>
                     </h2>
                     <p className="mt-4 text-stage-muted max-w-2xl mx-auto">
-                        15 años trabajando con los artistas y festivales más importantes de
-                        la escena internacional.
+                        {t("subtitle")}
                     </p>
                 </motion.div>
 
@@ -122,7 +123,7 @@ export function HallOfFame() {
                                         transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
                                     />
                                 )}
-                                <span className="relative z-10">{tiers[tier].label}</span>
+                                <span className="relative z-10">{t(`tiers.${tiersData[tier].labelKey}`)}</span>
                             </button>
                         ))}
                     </div>
@@ -206,11 +207,9 @@ export function HallOfFame() {
                                     </h3>
 
                                     {/* Role Badge */}
-                                    {artist.role && (
-                                        <span className="text-xs uppercase tracking-wider text-stage-muted bg-dark-surface px-3 py-1 rounded-full">
-                                            {artist.role}
-                                        </span>
-                                    )}
+                                    <span className="text-xs uppercase tracking-wider text-stage-muted bg-dark-surface px-3 py-1 rounded-full">
+                                        {t(`roles.${artist.roleKey}`)}
+                                    </span>
                                 </div>
                             </motion.div>
                         ))}

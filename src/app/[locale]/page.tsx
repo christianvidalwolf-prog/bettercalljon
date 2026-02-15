@@ -6,7 +6,6 @@ import { client } from "@/sanity/lib/client";
 import { servicesListQuery } from "@/sanity/lib/queries";
 
 export default async function HomePage() {
-    // Obtener servicios desde Sanity
     const services = client ? await client.fetch(servicesListQuery) : [];
 
     return (

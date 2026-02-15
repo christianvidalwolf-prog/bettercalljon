@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "Better Call Jon | Tour Manager & Producción en Barcelona",
+    "titleTemplate": "%s | Better Call Jon",
+    "description": "Agencia de Tour Management, producción de estadios y logística de festivales en Barcelona. 15 años de experiencia con Coldplay, Springsteen, Metallica, Primavera Sound y más.",
+    "ogDescription": "La solución a todos los problemas de tu gira. 15 años de experiencia en Tour Management, producción de estadios y logística de festivales.",
+    "twitterDescription": "La solución a todos los problemas de tu gira. ¡Nunca problemas, sólo soluciones!"
+  },
+  "nav": {
+    "services": "Servicios",
+    "hallOfFame": "Hall of Fame",
+    "contact": "Contacto",
+    "cta": "Hablemos",
+    "openMenu": "Abrir menú"
+  },
+  "hero": {
+    "tagline": "Tour Management · Producción · Logística",
+    "headline": "La solución a todos los problemas de tu gira",
+    "highlightWords": ["solución", "gira"],
+    "mantra": "¡Nunca problemas, sólo soluciones!",
+    "cta": "Hablemos",
+    "yearsValue": "15+",
+    "yearsLabel": "años de\nexperiencia",
+    "eventsValue": "500+",
+    "eventsLabel": "eventos\ngestionados",
+    "locationValue": "BCN",
+    "locationLabel": "Barcelona\nheadquarters",
+    "scroll": "Scroll"
+  },
+  "services": {
+    "tagline": "El Arsenal",
+    "title": "Nuestros",
+    "titleHighlight": "Servicios",
+    "subtitle": "Cinco pilares de excelencia operativa que cubren cada aspecto de tu producción en vivo.",
+    "moreInfo": "Más información"
+  },
+  "hallOfFame": {
+    "tagline": "Hall of Fame",
+    "title": "Salón de la",
+    "titleHighlight": "Fama",
+    "subtitle": "15 años trabajando con los artistas y festivales más importantes de la escena internacional.",
+    "tiers": {
+      "tourManager": "Tour Manager",
+      "stadiums": "Estadios",
+      "festivals": "Festivales"
+    },
+    "roles": {
+      "tourManager": "Tour Manager",
+      "production": "Producción",
+      "logistics": "Logística"
+    }
+  },
+  "contact": {
+    "tagline": "Centro de Mando",
+    "title": "Hablemos",
+    "subtitle": "¿Tienes un proyecto en mente? Cuéntanos los detalles y te responderemos en menos de 24 horas.",
+    "form": {
+      "name": "Nombre *",
+      "namePlaceholder": "Tu nombre",
+      "company": "Empresa *",
+      "companyPlaceholder": "Nombre de la empresa",
+      "email": "Email *",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+34 600 000 000",
+      "service": "Servicio *",
+      "servicePlaceholder": "Selecciona un servicio",
+      "message": "Mensaje *",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando..."
+    },
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "message": "Te contactaremos lo antes posible.",
+      "sendAnother": "Enviar otro mensaje"
+    },
+    "errors": {
+      "submitError": "Error al enviar. Inténtalo de nuevo.",
+      "connectionError": "Error de conexión. Inténtalo de nuevo."
+    },
+    "serviceOptions": {
+      "tourManager": "Tour Manager",
+      "stadiumProduction": "Producción de Estadios y Arenas",
+      "festivalLogistics": "Logística de Festivales",
+      "merchandising": "Merchandising",
+      "vehicles": "Vehículos"
+    }
+  },
+  "footer": {
+    "description": "Tour Management, producción de estadios y logística de festivales. Barcelona.",
+    "navigation": "Navegación",
+    "services": "Servicios",
+    "hallOfFame": "Hall of Fame",
+    "contactTitle": "Contacto",
+    "location": "Barcelona, España",
+    "copyright": "© {year} Better Call Jon. Todos los derechos reservados.",
+    "mantra": "¡Nunca problemas, sólo soluciones!"
+  },
+  "servicePage": {
+    "backToServices": "Volver a servicios",
+    "interested": "¿Interesado en este servicio?",
+    "contactUs": "Contáctanos para discutir cómo podemos ayudarte con tu proyecto",
+    "cta": "Hablemos",
+    "notFound": "Servicio no encontrado"
+  }
+}

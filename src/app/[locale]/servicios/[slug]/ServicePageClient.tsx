@@ -1,8 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/routing";
 import { ServiceSection } from "@/components/service/ServiceSection";
 import type { ServiceContent } from "@/data/services-data";
 
@@ -12,6 +13,7 @@ interface ServicePageClientProps {
 
 export function ServicePageClient({ service }: ServicePageClientProps) {
   const router = useRouter();
+  const t = useTranslations("servicePage");
 
   return (
     <div className="min-h-screen">
@@ -107,7 +109,7 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 />
               </svg>
-              <span>Volver a servicios</span>
+              <span>{t("backToServices")}</span>
             </button>
           </motion.div>
         </div>
@@ -131,16 +133,16 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
         >
           <div className="bg-dark-card border border-dark-border rounded-2xl p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              ¿Interesado en este servicio?
+              {t("interested")}
             </h2>
             <p className="text-stage-muted mb-8">
-              Contáctanos para discutir cómo podemos ayudarte con tu proyecto
+              {t("contactUs")}
             </p>
             <button
               onClick={() => router.push('/#contacto')}
               className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-stage-magenta to-stage-cyan text-white hover:shadow-[0_0_40px_rgba(224,64,251,0.5)] transition-all duration-500 hover:scale-105"
             >
-              Hablemos
+              {t("cta")}
               <svg
                 className="w-5 h-5"
                 fill="none"

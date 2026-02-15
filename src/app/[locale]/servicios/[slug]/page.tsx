@@ -4,14 +4,12 @@ import { serviceDetailQuery, allServiceSlugsQuery } from '@/sanity/lib/queries'
 import { ServicePageClient } from './ServicePageClient'
 import type { ServiceContent } from '@/data/services-data'
 
-// Generar params estáticos en build time
 export async function generateStaticParams() {
   if (!client) return []
   const slugs = await client.fetch<string[]>(allServiceSlugsQuery)
   return slugs.map(slug => ({ slug }))
 }
 
-// Metadata dinámica para SEO
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   if (!client) return { title: 'Better Call Jon' }
@@ -36,7 +34,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-// Server Component principal
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   if (!client) notFound()
@@ -48,6 +45,5 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     notFound()
   }
 
-  // Pasar datos al Client Component (para animaciones)
   return <ServicePageClient service={service} />
 }
