@@ -27,7 +27,7 @@ export const servicesData: ServiceContent[] = [
         icon: '/icons/tour-manager.png',
         accent: 'from-stage-magenta to-pink-600',
         glowColor: 'rgba(224, 64, 251, 0.3)',
-        heroImage: '/images/services/tour-manager-hero.jpg',
+        heroImage: '/images/services/tour-manager-hero.svg',
         sections: [
             {
                 type: 'text',
@@ -38,7 +38,7 @@ export const servicesData: ServiceContent[] = [
                 type: 'text-image',
                 title: 'Servicios que ofrecemos',
                 content: 'Nuestro equipo de Tour Managers con más de 15 años de experiencia se encarga de:\n\n• Planificación y coordinación de rutas de gira\n• Gestión de presupuestos y finanzas\n• Coordinación con venues y promotores\n• Logística de transporte y alojamiento\n• Resolución de problemas en tiempo real\n• Comunicación entre artistas, equipo técnico y promotores',
-                imageUrl: '/images/services/tour-manager-1.jpg',
+                imageUrl: '/images/services/tour-manager-1.svg',
                 imagePosition: 'right',
             },
             {
@@ -55,7 +55,7 @@ export const servicesData: ServiceContent[] = [
         icon: '/icons/estadios.png',
         accent: 'from-stage-cyan to-blue-600',
         glowColor: 'rgba(0, 229, 255, 0.3)',
-        heroImage: '/images/services/estadios-hero.jpg',
+        heroImage: '/images/services/estadios-hero.svg',
         sections: [
             {
                 type: 'text',
@@ -66,7 +66,7 @@ export const servicesData: ServiceContent[] = [
                 type: 'text-image',
                 title: 'Servicios de Producción',
                 content: 'Nuestra experiencia en estadios y arenas incluye:\n\n• Coordinación técnica completa\n• Gestión de equipos de sonido, iluminación y video a gran escala\n• Coordinación de montaje y desmontaje\n• Gestión de equipos técnicos\n• Coordinación con venue y seguridad\n• Planificación de tiempos y recursos',
-                imageUrl: '/images/services/estadios-1.jpg',
+                imageUrl: '/images/services/estadios-1.svg',
                 imagePosition: 'left',
             },
             {
@@ -83,7 +83,7 @@ export const servicesData: ServiceContent[] = [
         icon: '/icons/festivales.png',
         accent: 'from-stage-amber to-orange-600',
         glowColor: 'rgba(255, 171, 0, 0.3)',
-        heroImage: '/images/services/festivales-hero.jpg',
+        heroImage: '/images/services/festivales-hero.svg',
         sections: [
             {
                 type: 'text',
@@ -94,7 +94,7 @@ export const servicesData: ServiceContent[] = [
                 type: 'text-image',
                 title: 'Coordinación Logística Completa',
                 content: 'Gestión integral de festivales que incluye:\n\n• Coordinación de múltiples escenarios\n• Gestión de riders y hospitality\n• Coordinación de transportes y transfers\n• Gestión de backstage y catering\n• Coordinación entre artistas, técnicos y producción\n• Resolución de conflictos en tiempo real',
-                imageUrl: '/images/services/festivales-1.jpg',
+                imageUrl: '/images/services/festivales-1.svg',
                 imagePosition: 'right',
             },
             {
@@ -111,7 +111,7 @@ export const servicesData: ServiceContent[] = [
         icon: '/icons/merchandising.png',
         accent: 'from-stage-magenta to-stage-cyan',
         glowColor: 'rgba(224, 64, 251, 0.2)',
-        heroImage: '/images/services/merchandising-hero.jpg',
+        heroImage: '/images/services/merchandising-hero.svg',
         sections: [
             {
                 type: 'text',
@@ -122,7 +122,7 @@ export const servicesData: ServiceContent[] = [
                 type: 'text-image',
                 title: 'Servicios Integrales',
                 content: 'Nuestro servicio de merchandising incluye:\n\n• Diseño y desarrollo de productos\n• Producción y fabricación\n• Gestión de inventario\n• Logística y transporte\n• Montaje y gestión de stands en venues\n• Venta y gestión de personal\n• Reporting y análisis de ventas',
-                imageUrl: '/images/services/merchandising-1.jpg',
+                imageUrl: '/images/services/merchandising-1.svg',
                 imagePosition: 'left',
             },
             {
@@ -139,7 +139,7 @@ export const servicesData: ServiceContent[] = [
         icon: '/icons/vehiculos.png',
         accent: 'from-gray-400 to-gray-600',
         glowColor: 'rgba(200, 200, 220, 0.15)',
-        heroImage: '/images/services/vehiculos-hero.jpg',
+        heroImage: '/images/services/vehiculos-hero.svg',
         sections: [
             {
                 type: 'text',
@@ -150,7 +150,7 @@ export const servicesData: ServiceContent[] = [
                 type: 'text-image',
                 title: 'Servicios de Transporte',
                 content: 'Nuestra flota incluye:\n\n• Furgonetas de carga para equipos y backline\n• Vehículos para transporte de personal\n• Conductores profesionales con experiencia en giras\n• Seguros completos\n• Mantenimiento y limpieza garantizados\n• Disponibilidad 24/7',
-                imageUrl: '/images/services/vehiculos-1.jpg',
+                imageUrl: '/images/services/vehiculos-1.svg',
                 imagePosition: 'right',
             },
             {

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { ServiceSection } from "@/components/service/ServiceSection";
 import type { ServiceContent } from "@/data/services-data";
+import { useState } from "react";
 
 interface ServicePageClientProps {
   service: ServiceContent;
@@ -13,6 +14,7 @@ interface ServicePageClientProps {
 
 export function ServicePageClient({ service }: ServicePageClientProps) {
   const router = useRouter();
+  const [imageError, setImageError] = useState(false);
   const t = useTranslations("servicePage");
   const t_services = useTranslations("services");
 
@@ -21,7 +23,7 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        {service.heroImage && (
+        {service.heroImage && !imageError && (
           <div className="absolute inset-0 z-0">
             <Image
               src={service.heroImage}
@@ -29,6 +31,7 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
               fill
               className="object-cover opacity-30"
               priority
+              onError={() => setImageError(true)}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/50 via-dark-bg/80 to-dark-bg" />
           </div>
@@ -52,9 +55,10 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
             className="mb-8 inline-block"
           >
             <div
-              className={`w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gradient-to-br ${service.accent} p-6 shadow-2xl`}
+              className={`w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-black border-2 border-transparent p-4 shadow-2xl relative overflow-hidden group`}
             >
-              <div className="relative w-full h-full">
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.accent} opacity-20`} />
+              <div className="relative w-full h-full z-10">
                 <Image
                   src={service.icon}
                   alt={service.title}
@@ -62,6 +66,8 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
                   className="object-contain"
                 />
               </div>
+              <div className={`absolute inset-0 border-2 border-transparent bg-clip-border rounded-2xl`}
+                style={{ background: `linear-gradient(to bottom right, var(--stage-magenta), var(--stage-cyan)) border-box`, mask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)', maskComposite: 'exclude' }} />
             </div>
           </motion.div>
 
