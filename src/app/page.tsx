@@ -7,7 +7,7 @@ import { servicesListQuery } from "@/sanity/lib/queries";
 
 export default async function HomePage() {
     // Obtener servicios desde Sanity
-    const services = await client.fetch(servicesListQuery);
+    const services = client ? await client.fetch(servicesListQuery) : [];
 
     return (
         <>

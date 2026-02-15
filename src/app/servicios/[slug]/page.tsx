@@ -6,6 +6,7 @@ import type { ServiceContent } from '@/data/services-data'
 
 // Generar params estáticos en build time
 export async function generateStaticParams() {
+  if (!client) return []
   const slugs = await client.fetch<string[]>(allServiceSlugsQuery)
   return slugs.map(slug => ({ slug }))
 }
@@ -13,6 +14,7 @@ export async function generateStaticParams() {
 // Metadata dinámica para SEO
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
+  if (!client) return { title: 'Better Call Jon' }
   const service = await client.fetch<ServiceContent | null>(serviceDetailQuery, {
     slug
   })
@@ -37,6 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 // Server Component principal
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
+  if (!client) notFound()
   const service = await client.fetch<ServiceContent | null>(serviceDetailQuery, {
     slug
   })
