@@ -3,96 +3,22 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
-const services = [
-    {
-        icon: (
-            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
-                <Image
-                    src="/icons/tour-manager.png"
-                    alt="Tour Manager Icon"
-                    fill
-                    className="object-cover"
-                />
-            </div>
-        ),
-        title: "Tour Manager",
-        description:
-            "Gestión integral de giras nacionales e internacionales. El adulto de la gira que convierte el caos en precisión.",
-        accent: "from-stage-magenta to-pink-600",
-        glowColor: "rgba(224, 64, 251, 0.3)",
-    },
-    {
-        icon: (
-            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
-                <Image
-                    src="/icons/estadios.png"
-                    alt="Estadios Icon"
-                    fill
-                    className="object-cover"
-                />
-            </div>
-        ),
-        title: "Producción de Estadios y Arenas",
-        description:
-            "Palau Sant Jordi, Estadi Olímpic y más. Producción a gran escala con estándares internacionales.",
-        accent: "from-stage-cyan to-blue-600",
-        glowColor: "rgba(0, 229, 255, 0.3)",
-    },
-    {
-        icon: (
-            <div className="relative w-24 h-24 overflow-hidden rounded-xl bg-black">
-                <Image
-                    src="/icons/festivales.png"
-                    alt="Festivales Icon"
-                    fill
-                    className="object-cover rounded-xl scale-[1.05]"
-                />
-            </div>
-        ),
-        title: "Logística de Festivales",
-        description:
-            "Primavera Sound, Sónar, Cruïlla. Coordinación de escenarios, artistas y operaciones en tiempo real.",
-        accent: "from-stage-amber to-orange-600",
-        glowColor: "rgba(255, 171, 0, 0.3)",
-    },
-    {
-        icon: (
-            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
-                <Image
-                    src="/icons/merchandising.png"
-                    alt="Merchandising Icon"
-                    fill
-                    className="object-cover"
-                />
-            </div>
-        ),
-        title: "Merchandising",
-        description:
-            "Gestión completa de merchandising oficial: diseño, producción, logística y venta en gira.",
-        accent: "from-stage-magenta to-stage-cyan",
-        glowColor: "rgba(224, 64, 251, 0.2)",
-    },
-    {
-        icon: (
-            <div className="relative w-24 h-24 overflow-hidden rounded-xl">
-                <Image
-                    src="/icons/vehiculos.png"
-                    alt="Vehiculos Icon"
-                    fill
-                    className="object-cover"
-                />
-            </div>
-        ),
-        title: "Vehículos",
-        description:
-            "Flota propia de vehículos para transporte de equipos, backline y personal técnico.",
-        accent: "from-gray-400 to-gray-600",
-        glowColor: "rgba(200, 200, 220, 0.15)",
-    },
-];
+interface Service {
+    slug: string;
+    title: string;
+    shortDescription: string;
+    icon: string;
+    accent: string;
+    glowColor: string;
+}
 
-export function Services() {
+interface ServicesProps {
+    services: Service[];
+}
+
+export function Services({ services }: ServicesProps) {
     const sectionRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -138,61 +64,72 @@ export function Services() {
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((service, i) => (
-                        <motion.div
+                        <Link
                             key={service.title}
-                            initial={{ opacity: 0, y: 40 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
-                            className={`group relative rounded-2xl bg-dark-card border border-dark-border p-8 cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-transparent ${i === 4 ? "md:col-span-2 lg:col-span-1" : ""
-                                }`}
-                            style={{
-                                willChange: "transform",
-                            }}
-                            whileHover={{
-                                boxShadow: `0 20px 60px ${service.glowColor}`,
-                            }}
+                            href={`/servicios/${service.slug}`}
+                            className={`${i === 4 ? "md:col-span-2 lg:col-span-1" : ""}`}
                         >
-                            {/* Hover Gradient Overlay */}
-                            <div
-                                className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.accent} opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500`}
-                            />
-
-                            {/* Icon */}
-                            <div
-                                className={`inline-flex items-center justify-center w-24 h-24 rounded-xl bg-gradient-to-br ${service.accent} text-white mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
+                            <motion.div
+                                initial={{ opacity: 0, y: 40 }}
+                                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                className="group relative rounded-2xl bg-dark-card border border-dark-border p-8 cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-transparent h-full"
+                                style={{
+                                    willChange: "transform",
+                                }}
+                                whileHover={{
+                                    boxShadow: `0 20px 60px ${service.glowColor}`,
+                                }}
                             >
-                                {service.icon}
-                            </div>
+                                {/* Hover Gradient Overlay */}
+                                <div
+                                    className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.accent} opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500`}
+                                />
 
-                            {/* Content */}
-                            <h3
-                                className="text-xl font-bold mb-3 text-stage-white group-hover:text-white transition-colors"
-                                style={{ fontFamily: "var(--font-family-display)" }}
-                            >
-                                {service.title}
-                            </h3>
-                            <p className="text-sm text-stage-muted leading-relaxed group-hover:text-gray-300 transition-colors">
-                                {service.description}
-                            </p>
-
-                            {/* Arrow */}
-                            <div className="mt-6 flex items-center gap-2 text-sm font-medium text-stage-muted group-hover:text-stage-cyan transition-colors">
-                                <span>Más información</span>
-                                <svg
-                                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
+                                {/* Icon */}
+                                <div
+                                    className={`inline-flex items-center justify-center w-24 h-24 rounded-xl bg-gradient-to-br ${service.accent} text-white mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
                                 >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                    />
-                                </svg>
-                            </div>
-                        </motion.div>
+                                    <div className="relative w-24 h-24 overflow-hidden rounded-xl">
+                                        <Image
+                                            src={service.icon}
+                                            alt={`${service.title} Icon`}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Content */}
+                                <h3
+                                    className="text-xl font-bold mb-3 text-stage-white group-hover:text-white transition-colors"
+                                    style={{ fontFamily: "var(--font-family-display)" }}
+                                >
+                                    {service.title}
+                                </h3>
+                                <p className="text-sm text-stage-muted leading-relaxed group-hover:text-gray-300 transition-colors">
+                                    {service.shortDescription}
+                                </p>
+
+                                {/* Arrow */}
+                                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-stage-muted group-hover:text-stage-cyan transition-colors">
+                                    <span>Más información</span>
+                                    <svg
+                                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        />
+                                    </svg>
+                                </div>
+                            </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>
