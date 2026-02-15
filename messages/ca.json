@@ -1,107 +1,107 @@
 {
   "metadata": {
-    "title": "Better Call Jon | Tour Manager & Producción en Barcelona",
+    "title": "Better Call Jon | Tour Manager & Producció a Barcelona",
     "titleTemplate": "%s | Better Call Jon",
-    "description": "Agencia de Tour Management, producción de estadios y logística de festivales en Barcelona. 15 años de experiencia con Coldplay, Springsteen, Metallica, Primavera Sound y más.",
-    "ogDescription": "La solución a todos los problemas de tu gira. 15 años de experiencia en Tour Management, producción de estadios y logística de festivales.",
-    "twitterDescription": "La solución a todos los problemas de tu gira. ¡Nunca problemas, sólo soluciones!"
+    "description": "Agència de Tour Management, producció d'estadis i logística de festivals a Barcelona. 15 anys d'experiència amb Coldplay, Springsteen, Metallica, Primavera Sound i més.",
+    "ogDescription": "La solució a tots els problemes de la teva gira. 15 anys d'experiència en Tour Management, producció d'estadis i logística de festivals.",
+    "twitterDescription": "La solució a tots els problemes de la teva gira. Mai problemes, només solucions!"
   },
   "nav": {
-    "services": "Servicios",
+    "services": "Serveis",
     "hallOfFame": "Hall of Fame",
-    "contact": "Contacto",
-    "cta": "Hablemos",
-    "openMenu": "Abrir menú"
+    "contact": "Contacte",
+    "cta": "Parlem",
+    "openMenu": "Obrir menú"
   },
   "hero": {
-    "tagline": "Tour Management · Producción · Logística",
-    "headline": "La solución a todos los problemas de tu gira",
-    "highlightWords": ["solución", "gira"],
-    "mantra": "¡Nunca problemas, sólo soluciones!",
-    "cta": "Hablemos",
+    "tagline": "Tour Management · Producció · Logística",
+    "headline": "La solució a tots els problemes de la teva gira",
+    "highlightWords": ["solució", "gira"],
+    "mantra": "Mai problemes, només solucions!",
+    "cta": "Parlem",
     "yearsValue": "15+",
-    "yearsLabel": "años de\nexperiencia",
+    "yearsLabel": "anys\nd'experiència",
     "eventsValue": "500+",
-    "eventsLabel": "eventos\ngestionados",
+    "eventsLabel": "esdeveniments\ngestionats",
     "locationValue": "BCN",
     "locationLabel": "Barcelona\nheadquarters",
     "scroll": "Scroll"
   },
   "services": {
-    "tagline": "El Arsenal",
-    "title": "Nuestros",
-    "titleHighlight": "Servicios",
-    "subtitle": "Cinco pilares de excelencia operativa que cubren cada aspecto de tu producción en vivo.",
-    "moreInfo": "Más información"
+    "tagline": "L'Arsenal",
+    "title": "Els nostres",
+    "titleHighlight": "Serveis",
+    "subtitle": "Cinc pilars d'excel·lència operativa que cobreixen cada aspecte de la teva producció en viu.",
+    "moreInfo": "Més informació"
   },
   "hallOfFame": {
     "tagline": "Hall of Fame",
-    "title": "Salón de la",
+    "title": "Saló de la",
     "titleHighlight": "Fama",
-    "subtitle": "15 años trabajando con los artistas y festivales más importantes de la escena internacional.",
+    "subtitle": "15 anys treballant amb els artistes i festivals més importants de l'escena internacional.",
     "tiers": {
       "tourManager": "Tour Manager",
-      "stadiums": "Estadios",
-      "festivals": "Festivales"
+      "stadiums": "Estadis",
+      "festivals": "Festivals"
     },
     "roles": {
       "tourManager": "Tour Manager",
-      "production": "Producción",
+      "production": "Producció",
       "logistics": "Logística"
     }
   },
   "contact": {
-    "tagline": "Centro de Mando",
-    "title": "Hablemos",
-    "subtitle": "¿Tienes un proyecto en mente? Cuéntanos los detalles y te responderemos en menos de 24 horas.",
+    "tagline": "Centre de Comandament",
+    "title": "Parlem",
+    "subtitle": "Tens un projecte en ment? Explica'ns els detalls i et respondrem en menys de 24 hores.",
     "form": {
-      "name": "Nombre *",
-      "namePlaceholder": "Tu nombre",
+      "name": "Nom *",
+      "namePlaceholder": "El teu nom",
       "company": "Empresa *",
-      "companyPlaceholder": "Nombre de la empresa",
+      "companyPlaceholder": "Nom de l'empresa",
       "email": "Email *",
       "emailPlaceholder": "tu@email.com",
-      "phone": "Teléfono",
+      "phone": "Telèfon",
       "phonePlaceholder": "+34 600 000 000",
-      "service": "Servicio *",
-      "servicePlaceholder": "Selecciona un servicio",
-      "message": "Mensaje *",
-      "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
-      "submit": "Enviar mensaje",
-      "submitting": "Enviando..."
+      "service": "Servei *",
+      "servicePlaceholder": "Selecciona un servei",
+      "message": "Missatge *",
+      "messagePlaceholder": "Explica'ns el teu projecte...",
+      "submit": "Enviar missatge",
+      "submitting": "Enviant..."
     },
     "success": {
-      "title": "¡Mensaje enviado!",
-      "message": "Te contactaremos lo antes posible.",
-      "sendAnother": "Enviar otro mensaje"
+      "title": "Missatge enviat!",
+      "message": "Et contactarem el més aviat possible.",
+      "sendAnother": "Enviar un altre missatge"
     },
     "errors": {
-      "submitError": "Error al enviar. Inténtalo de nuevo.",
-      "connectionError": "Error de conexión. Inténtalo de nuevo."
+      "submitError": "Error en enviar. Torna-ho a intentar.",
+      "connectionError": "Error de connexió. Torna-ho a intentar."
     },
     "serviceOptions": {
       "tourManager": "Tour Manager",
-      "stadiumProduction": "Producción de Estadios y Arenas",
-      "festivalLogistics": "Logística de Festivales",
+      "stadiumProduction": "Producció d'Estadis i Arenes",
+      "festivalLogistics": "Logística de Festivals",
       "merchandising": "Merchandising",
-      "vehicles": "Vehículos"
+      "vehicles": "Vehicles"
     }
   },
   "footer": {
-    "description": "Tour Management, producción de estadios y logística de festivales. Barcelona.",
-    "navigation": "Navegación",
-    "services": "Servicios",
+    "description": "Tour Management, producció d'estadis i logística de festivals. Barcelona.",
+    "navigation": "Navegació",
+    "services": "Serveis",
     "hallOfFame": "Hall of Fame",
-    "contactTitle": "Contacto",
-    "location": "Barcelona, España",
-    "copyright": "© {year} Better Call Jon. Todos los derechos reservados.",
-    "mantra": "¡Nunca problemas, sólo soluciones!"
+    "contactTitle": "Contacte",
+    "location": "Barcelona, Espanya",
+    "copyright": "© {year} Better Call Jon. Tots els drets reservats.",
+    "mantra": "Mai problemes, només solucions!"
   },
   "servicePage": {
-    "backToServices": "Volver a servicios",
-    "interested": "¿Interesado en este servicio?",
-    "contactUs": "Contáctanos para discutir cómo podemos ayudarte con tu proyecto",
-    "cta": "Hablemos",
-    "notFound": "Servicio no encontrado"
+    "backToServices": "Tornar a serveis",
+    "interested": "Interessat en aquest servei?",
+    "contactUs": "Contacta'ns per parlar de com podem ajudar-te amb el teu projecte",
+    "cta": "Parlem",
+    "notFound": "Servei no trobat"
   }
 }
