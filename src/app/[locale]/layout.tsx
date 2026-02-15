@@ -108,6 +108,7 @@ export default async function LocaleLayout({
     const messages = await getMessages();
 
     const t = await getTranslations({ locale: locale as Locale, namespace: "schema" });
+    const t_services = await getTranslations({ locale: locale as Locale, namespace: "services" });
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -146,13 +147,13 @@ export default async function LocaleLayout({
                 },
                 hasOfferCatalog: {
                     "@type": "OfferCatalog",
-                    name: "Servicios",
+                    name: t_services("titleHighlight"),
                     itemListElement: [
-                        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tour Management" } },
-                        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Producción de Estadios y Arenas" } },
-                        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Logística de Festivales" } },
-                        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Merchandising" } },
-                        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vehículos" } },
+                        { "@type": "Offer", itemOffered: { "@type": "Service", name: t_services("cards.tour-manager.title") } },
+                        { "@type": "Offer", itemOffered: { "@type": "Service", name: t_services("cards.produccion-estadios.title") } },
+                        { "@type": "Offer", itemOffered: { "@type": "Service", name: t_services("cards.logistica-festivales.title") } },
+                        { "@type": "Offer", itemOffered: { "@type": "Service", name: t_services("cards.merchandising.title") } },
+                        { "@type": "Offer", itemOffered: { "@type": "Service", name: t_services("cards.vehiculos.title") } },
                     ],
                 },
             },

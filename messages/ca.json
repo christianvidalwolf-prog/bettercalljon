@@ -57,6 +57,88 @@
         "title": "Vehicles",
         "description": "Flota pròpia de vehicles per al transport d'equips, backline i personal tècnic."
       }
+    },
+    "details": {
+      "tour-manager": {
+        "sections": [
+          {
+            "title": "Què és un Tour Manager?",
+            "content": "Un Tour Manager és el professional encarregat de la gestió integral d'una gira musical. Coordina tots els aspectes logístics, administratius i operatius per garantir que cada show es desenvolupi sense contratemps."
+          },
+          {
+            "title": "Serveis que oferim",
+            "content": "El nostre equip de Tour Managers amb més de 15 anys d'experiència s'encarrega de:\n\n• Planificació i coordinació de rutes de gira\n• Gestió de pressupostos i finances\n• Coordinació amb venues i promotors\n• Logística de transport i allotjament\n• Resolució de problemes en temps real\n• Comunicació entre artistes, equip tècnic i promotors"
+          },
+          {
+            "title": "Experiència provada",
+            "content": "Hem gestionat gires nacionals i internacionals d'artistes de primer nivell, garantint professionalitat, eficiència i tranquil·litat perquè els artistes puguin centrar-se en el que millor saben fer: actuar."
+          }
+        ]
+      },
+      "produccion-estadios": {
+        "sections": [
+          {
+            "title": "Producció de Gran Format",
+            "content": "Especialistes en la producció d'esdeveniments en espais de gran capacitat com el Palau Sant Jordi, Estadi Olímpic i les principals arenes d'Espanya."
+          },
+          {
+            "title": "Serveis de Producció",
+            "content": "La nostra experiència en estadis i arenes inclou:\n\n• Coordinació tècnica completa\n• Gestió d'equips de so, il·luminació i vídeo a gran escala\n• Coordinació de muntatge i desmuntatge\n• Gestió d'equips tècnics\n• Coordinació amb venue i seguretat\n• Planificació de temps i recursos"
+          },
+          {
+            "title": "Estàndards Internacionals",
+            "content": "Treballem amb els estàndards més alts de la indústria, garantint produccions de nivell internacional a qualsevol venue de gran format."
+          }
+        ]
+      },
+      "logistica-festivales": {
+        "sections": [
+          {
+            "title": "Especialistes en Festivals",
+            "content": "Experiència comprovada en els principals festivals d'Espanya: Primavera Sound, Sónar, Cruïlla i molts més. Coordinació de múltiples escenaris, artistes i operacions simultànies."
+          },
+          {
+            "title": "Coordinació Logística Completa",
+            "content": "Gestió integral de festivals que inclou:\n\n• Coordinació de múltiples escenaris\n• Gestió de riders i hospitality\n• Coordinació de transports i transfers\n• Gestió de backstage i càtering\n• Coordinació entre artistes, tècnics i producció\n• Resolució de conflictes en temps real"
+          },
+          {
+            "title": "Operacions en Temps Real",
+            "content": "El nostre equip està preparat per gestionar la complexitat d'un festival, amb múltiples artistes, canvis d'escenari ràpids i la coordinació necessària perquè tot flueixi perfectament."
+          }
+        ]
+      },
+      "merchandising": {
+        "sections": [
+          {
+            "title": "Marxandatge de Gira",
+            "content": "Gestió completa del marxandatge oficial d'artistes, des del concepte inicial fins a la venda en gira i en línia."
+          },
+          {
+            "title": "Serveis Integrals",
+            "content": "El nostre servei de marxandatge inclou:\n\n• Disseny i desenvolupament de productes\n• Producció i fabricació\n• Gestió d'inventari\n• Logística i transport\n• Muntatge i gestió d'stands en venues\n• Venda i gestió de personal\n• Informe i anàlisi de vendes"
+          },
+          {
+            "title": "Maximitza els teus Ingressos",
+            "content": "El marxandatge és una font d'ingressos fonamental en les gires. El nostre equip expert garanteix la màxima rendibilitat amb productes de qualitat que els fans adoren."
+          }
+        ]
+      },
+      "vehiculos": {
+        "sections": [
+          {
+            "title": "Flota Pròpia",
+            "content": "Disposem d'una flota pròpia de vehicles adaptats per al transport d'equips, instruments, backline i personal tècnic."
+          },
+          {
+            "title": "Serveis de Transport",
+            "content": "La nostra flota inclou:\n\n• Furgonetes de càrrega per a equips i backline\n• Vehicles per al transport de personal\n• Conductors professionals amb experiència en gires\n• Assegurances completes\n• Manteniment i neteja garantits\n• Disponibilitat 24/7"
+          },
+          {
+            "title": "Confiabilitat Garantida",
+            "content": "Els nostres vehicles reben manteniment regular i estan preparats per a les exigències de les gires. Confiabilitat quan més la necessites."
+          }
+        ]
+      }
     }
   },
   "hallOfFame": {

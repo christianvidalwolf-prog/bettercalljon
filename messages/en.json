@@ -57,6 +57,88 @@
         "title": "Vehicles",
         "description": "Own fleet of vehicles for equipment, backline, and technical staff transport."
       }
+    },
+    "details": {
+      "tour-manager": {
+        "sections": [
+          {
+            "title": "What is a Tour Manager?",
+            "content": "A Tour Manager is the professional in charge of the comprehensive management of a musical tour. They coordinate all logistical, administrative, and operational aspects to ensure that every show runs without any setbacks."
+          },
+          {
+            "title": "Services we offer",
+            "content": "Our team of Tour Managers with more than 15 years of experience handles:\n\n• Tour route planning and coordination\n• Budget and finance management\n• Coordination with venues and promoters\n• Transport and accommodation logistics\n• Real-time problem solving\n• Communication between artists, technical crew, and promoters"
+          },
+          {
+            "title": "Proven experience",
+            "content": "We have managed national and international tours for top-tier artists, guaranteeing professionalism, efficiency, and peace of mind so that the artists can focus on what they do best: perform."
+          }
+        ]
+      },
+      "produccion-estadios": {
+        "sections": [
+          {
+            "title": "Large Format Production",
+            "content": "Specialists in the production of events in large-capacity spaces such as the Palau Sant Jordi, Estadi Olímpic, and the main arenas in Spain."
+          },
+          {
+            "title": "Production Services",
+            "content": "Our experience in stadiums and arenas includes:\n\n• Full technical coordination\n• Management of large-scale sound, lighting, and video equipment\n• Coordination of setup and teardown\n• Technical crew management\n• Coordination with venue and security\n• Time and resource planning"
+          },
+          {
+            "title": "International Standards",
+            "content": "We work with the highest industry standards, guaranteeing international-level productions in any large-format venue."
+          }
+        ]
+      },
+      "logistica-festivales": {
+        "sections": [
+          {
+            "title": "Festival Specialists",
+            "content": "Proven experience in Spain's leading festivals: Primavera Sound, Sónar, Cruïlla, and many more. Coordination of multiple stages, artists, and simultaneous operations."
+          },
+          {
+            "title": "Full Logistical Coordination",
+            "content": "Comprehensive festival management including:\n\n• Coordination of multiple stages\n• Management of riders and hospitality\n• Coordination of transport and transfers\n• Backstage and catering management\n• Coordination between artists, technicians, and production\n• Real-time conflict resolution"
+          },
+          {
+            "title": "Real-Time Operations",
+            "content": "Our team is prepared to manage the complexity of a festival, with multiple artists, fast stage changes, and the necessary coordination for everything to flow perfectly."
+          }
+        ]
+      },
+      "merchandising": {
+        "sections": [
+          {
+            "title": "Tour Merchandising",
+            "content": "Full management of artists' official merchandising, from the initial concept to tour and online sales."
+          },
+          {
+            "title": "Comprehensive Services",
+            "content": "Our merchandising service includes:\n\n• Product design and development\n• Production and manufacturing\n• Inventory management\n• Logistics and transport\n• Setup and management of stands in venues\n• Sales and staff management\n• Reporting and sales analysis"
+          },
+          {
+            "title": "Maximize Your Revenue",
+            "content": "Merchandising is a fundamental source of income during tours. Our expert team ensures maximum profitability with quality products that fans love."
+          }
+        ]
+      },
+      "vehiculos": {
+        "sections": [
+          {
+            "title": "Own Fleet",
+            "content": "We have our own fleet of vehicles adapted for transporting equipment, instruments, backline, and technical staff."
+          },
+          {
+            "title": "Transport Services",
+            "content": "Our fleet includes:\n\n• Cargo vans for equipment and backline\n• Personnel transport vehicles\n• Professional drivers with tour experience\n• Comprehensive insurance\n• Guaranteed maintenance and cleaning\n• 24/7 availability"
+          },
+          {
+            "title": "Guaranteed Reliability",
+            "content": "Our vehicles receive regular maintenance and are prepared for the demands of tours. Reliability when you need it most."
+          }
+        ]
+      }
     }
   },
   "hallOfFame": {

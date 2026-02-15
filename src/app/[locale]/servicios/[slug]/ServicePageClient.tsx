@@ -119,9 +119,19 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
       {/* Content Sections */}
       <section className="section-padding relative">
         <div className="max-w-5xl mx-auto">
-          {service.sections.map((section, index) => (
-            <ServiceSection key={index} section={section} index={index} />
-          ))}
+          {service.sections.map((section, index) => {
+            // Priority: Localized JSON content -> raw Sanity content
+            const translatedTitle = t_services.raw(`details.${service.slug}.sections`)?.[index]?.title || section.title;
+            const translatedContent = t_services.raw(`details.${service.slug}.sections`)?.[index]?.content || section.content;
+
+            const translatedSection = {
+              ...section,
+              title: translatedTitle,
+              content: translatedContent,
+            };
+
+            return <ServiceSection key={index} section={translatedSection} index={index} />;
+          })}
         </div>
 
         {/* CTA Section */}

@@ -57,6 +57,88 @@
         "title": "Vehículos",
         "description": "Flota propia de vehículos para transporte de equipos, backline y personal técnico."
       }
+    },
+    "details": {
+      "tour-manager": {
+        "sections": [
+          {
+            "title": "¿Qué es un Tour Manager?",
+            "content": "Un Tour Manager es el profesional encargado de la gestión integral de una gira musical. Coordina todos los aspectos logísticos, administrativos y operativos para garantizar que cada show se desarrolle sin contratiempos."
+          },
+          {
+            "title": "Servicios que ofrecemos",
+            "content": "Nuestro equipo de Tour Managers con más de 15 años de experiencia se encarga de:\n\n• Planificación y coordinación de rutas de gira\n• Gestión de presupuestos y finanzas\n• Coordinación con venues y promotores\n• Logítica de transporte y alojamiento\n• Resolución de problemas en tiempo real\n• Comunicación entre artistas, equipo técnico y promotores"
+          },
+          {
+            "title": "Experiencia probada",
+            "content": "Hemos gestionado giras nacionales e internacionales de artistas de primer nivel, garantizando profesionalidad, eficiencia y tranquilidad para que los artistas puedan centrarse en lo que mejor saben hacer: actuar."
+          }
+        ]
+      },
+      "produccion-estadios": {
+        "sections": [
+          {
+            "title": "Producción de Gran Formato",
+            "content": "Especialistas en la producción de eventos en espacios de gran capacidad como el Palau Sant Jordi, Estadi Olímpic y las principales arenas de España."
+          },
+          {
+            "title": "Servicios de Producción",
+            "content": "Nuestra experiencia en estadios y arenas incluye:\n\n• Coordinación técnica completa\n• Gestión de equipos de sonido, iluminación y video a gran escala\n• Coordinación de montaje y desmontaje\n• Gestión de equipos técnicos\n• Coordinación con venue y seguridad\n• Planificación de tiempos y recursos"
+          },
+          {
+            "title": "Estándares Internacionales",
+            "content": "Trabajamos con los más altos estándares de la industria, garantizando producciones de nivel internacional en cualquier venue de gran formato."
+          }
+        ]
+      },
+      "logistica-festivales": {
+        "sections": [
+          {
+            "title": "Especialistas en Festivales",
+            "content": "Experiencia comprobada en los principales festivales de España: Primavera Sound, Sónar, Cruïlla y muchos más. Coordinación de múltiples escenarios, artistas y operaciones simultáneas."
+          },
+          {
+            "title": "Coordinación Logísitica Completa",
+            "content": "Gestión integral de festivales que incluye:\n\n• Coordinación de múltiples escenarios\n• Gestión de riders y hospitality\n• Coordinación de transportes y transfers\n• Gestión de backstage y catering\n• Coordinación entre artistas, técnicos y producción\n• Resolución de conflictos en tiempo real"
+          },
+          {
+            "title": "Operaciones en Tiempo Real",
+            "content": "Nuestro equipo está preparado para gestionar la complejidad de un festival, con múltiples artistas, cambios de escenario rápidos y la coordinación necesaria para que todo fluya perfectamente."
+          }
+        ]
+      },
+      "merchandising": {
+        "sections": [
+          {
+            "title": "Merchandising de Gira",
+            "content": "Gestión completa del merchandising oficial de artistas, desde el concepto inicial hasta la venta en gira y online."
+          },
+          {
+            "title": "Servicios Integrales",
+            "content": "Nuestro servicio de merchandising incluye:\n\n• Diseño y desarrollo de productos\n• Producción y fabricación\n• Gestión de inventario\n• Logística y transporte\n• Montaje y gestión de stands en venues\n• Venta y gestión de personal\n• Reporting y análisis de ventas"
+          },
+          {
+            "title": "Maximiza tus Ingresos",
+            "content": "El merchandising es una fuente de ingresos fundamental en las giras. Nuestro equipo experto garantiza la máxima rentabilidad con productos de calidad que los fans adoran."
+          }
+        ]
+      },
+      "vehiculos": {
+        "sections": [
+          {
+            "title": "Flota Propia",
+            "content": "Disponemos de una flota propia de vehículos adaptados para el transporte de equipos, instrumentos, backline y personal técnico."
+          },
+          {
+            "title": "Servicios de Transporte",
+            "content": "Nuestra flota incluye:\n\n• Furgonetas de carga para equipos y backline\n• Vehículos para transporte de personal\n• Conductores profesionales con experiencia en giras\n• Seguros completos\n• Mantenimiento y limpieza garantizados\n• Disponibilidad 24/7"
+          },
+          {
+            "title": "Confiabilidad Garantizada",
+            "content": "Nuestros vehículos reciben mantenimiento regular y están preparados para las exigencias de las giras. Confiabilidad cuando más la necesitas."
+          }
+        ]
+      }
     }
   },
   "hallOfFame": {
