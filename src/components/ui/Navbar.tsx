@@ -5,6 +5,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Link } from "@/i18n/routing";
 
 export function Navbar() {
     const [isVisible, setIsVisible] = useState(true);
@@ -54,14 +55,14 @@ export function Navbar() {
             >
                 <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
-                    <a
-                        href="#"
-                        className="font-display text-xl md:text-2xl font-bold tracking-tight"
+                    <Link
+                        href="/"
+                        className="font-display text-xl md:text-2xl font-bold tracking-tight group"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
-                        <span className="gradient-text">Better Call</span>{" "}
+                        <span className="gradient-text group-hover:brightness-110 transition-all">Better Call</span>{" "}
                         <span className="text-stage-white">Jon</span>
-                    </a>
+                    </Link>
 
                     {/* Desktop Links */}
                     <div className="hidden md:flex items-center gap-8">
