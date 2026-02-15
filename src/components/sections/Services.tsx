@@ -95,7 +95,7 @@ export function Services({ services }: ServicesProps) {
                                             src={service.icon}
                                             alt={`${service.title} Icon`}
                                             fill
-                                            className="object-cover"
+                                            className="object-cover scale-110"
                                         />
                                     </div>
                                 </div>
