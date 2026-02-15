@@ -107,6 +107,8 @@ export default async function LocaleLayout({
 
     const messages = await getMessages();
 
+    const t = await getTranslations({ locale: locale as Locale, namespace: "schema" });
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
@@ -114,8 +116,7 @@ export default async function LocaleLayout({
                 "@type": "Organization",
                 name: "Better Call Jon",
                 url: siteUrl,
-                description:
-                    "Agencia de Tour Management, producción de estadios y logística de festivales en Barcelona.",
+                description: t("organizationDescription"),
                 foundingDate: "2010",
                 founder: {
                     "@type": "Person",
@@ -136,8 +137,7 @@ export default async function LocaleLayout({
                 "@type": "ProfessionalService",
                 name: "Better Call Jon",
                 url: siteUrl,
-                description:
-                    "Servicios profesionales de Tour Management, producción de conciertos en estadios y arenas, logística de festivales, merchandising y vehículos.",
+                description: t("serviceDescription"),
                 priceRange: "$$$$",
                 address: {
                     "@type": "PostalAddress",

@@ -16,7 +16,10 @@
   "hero": {
     "tagline": "Tour Management · Producció · Logística",
     "headline": "La solució a tots els problemes de la teva gira",
-    "highlightWords": ["solució", "gira"],
+    "highlightWords": [
+      "solució",
+      "gira"
+    ],
     "mantra": "Mai problemes, només solucions!",
     "cta": "Parlem",
     "yearsValue": "15+",
@@ -32,7 +35,29 @@
     "title": "Els nostres",
     "titleHighlight": "Serveis",
     "subtitle": "Cinc pilars d'excel·lència operativa que cobreixen cada aspecte de la teva producció en viu.",
-    "moreInfo": "Més informació"
+    "moreInfo": "Més informació",
+    "cards": {
+      "tour-manager": {
+        "title": "Tour Manager",
+        "description": "Gestió integral de gires nacionals i internacionals. L'adult de la gira que converteix el caos en precisió."
+      },
+      "produccion-estadios": {
+        "title": "Producció d'Estadis i Arenes",
+        "description": "Palau Sant Jordi, Estadi Olímpic i més. Producció a gran escala amb estàndards internacionals."
+      },
+      "logistica-festivales": {
+        "title": "Logística de Festivals",
+        "description": "Primavera Sound, Sónar, Cruïlla. Coordinació d'escenaris, artistes i operacions en temps real."
+      },
+      "merchandising": {
+        "title": "Merchandising",
+        "description": "Gestió completa de marxandatge oficial: disseny, producció, logística i venda en gira."
+      },
+      "vehiculos": {
+        "title": "Vehicles",
+        "description": "Flota pròpia de vehicles per al transport d'equips, backline i personal tècnic."
+      }
+    }
   },
   "hallOfFame": {
     "tagline": "Hall of Fame",
@@ -103,5 +128,9 @@
     "contactUs": "Contacta'ns per parlar de com podem ajudar-te amb el teu projecte",
     "cta": "Parlem",
     "notFound": "Servei no trobat"
+  },
+  "schema": {
+    "organizationDescription": "Agència de Tour Management, producció d'estadis i logística de festivals a Barcelona.",
+    "serviceDescription": "Serveis professionals de Tour Management, producció de concerts en estadis i arenes, logística de festivals, marxandatge i vehicles."
   }
 }

@@ -16,7 +16,10 @@
   "hero": {
     "tagline": "Tour Management · Production · Logistics",
     "headline": "The solution to all your tour problems",
-    "highlightWords": ["solution", "problems"],
+    "highlightWords": [
+      "solution",
+      "problems"
+    ],
     "mantra": "Never problems, only solutions!",
     "cta": "Let's Talk",
     "yearsValue": "15+",
@@ -32,7 +35,29 @@
     "title": "Our",
     "titleHighlight": "Services",
     "subtitle": "Five pillars of operational excellence covering every aspect of your live production.",
-    "moreInfo": "Learn more"
+    "moreInfo": "Learn more",
+    "cards": {
+      "tour-manager": {
+        "title": "Tour Manager",
+        "description": "Comprehensive management of national and international tours. The tour adult who turns chaos into precision."
+      },
+      "produccion-estadios": {
+        "title": "Stadium & Arena Production",
+        "description": "Palau Sant Jordi, Estadi Olímpic and more. Large-scale production with international standards."
+      },
+      "logistica-festivales": {
+        "title": "Festival Logistics",
+        "description": "Primavera Sound, Sónar, Cruïlla. Coordination of stages, artists, and real-time operations."
+      },
+      "merchandising": {
+        "title": "Merchandising",
+        "description": "Complete management of official merchandising: design, production, logistics, and tour sales."
+      },
+      "vehiculos": {
+        "title": "Vehicles",
+        "description": "Own fleet of vehicles for equipment, backline, and technical staff transport."
+      }
+    }
   },
   "hallOfFame": {
     "tagline": "Hall of Fame",
@@ -103,5 +128,9 @@
     "contactUs": "Contact us to discuss how we can help you with your project",
     "cta": "Let's Talk",
     "notFound": "Service not found"
+  },
+  "schema": {
+    "organizationDescription": "Tour Management, stadium production and festival logistics agency in Barcelona.",
+    "serviceDescription": "Professional Tour Management services, stadium and arena production, festival logistics, merchandising and vehicles."
   }
 }

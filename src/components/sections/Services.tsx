@@ -106,10 +106,10 @@ export function Services({ services }: ServicesProps) {
                                     className="text-xl font-bold mb-3 text-stage-white group-hover:text-white transition-colors"
                                     style={{ fontFamily: "var(--font-family-display)" }}
                                 >
-                                    {service.title}
+                                    {t(`cards.${service.slug}.title`)}
                                 </h3>
                                 <p className="text-sm text-stage-muted leading-relaxed group-hover:text-gray-300 transition-colors">
-                                    {service.shortDescription}
+                                    {t(`cards.${service.slug}.description`)}
                                 </p>
 
                                 {/* Arrow */}

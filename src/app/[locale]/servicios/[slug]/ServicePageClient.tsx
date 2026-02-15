@@ -14,6 +14,7 @@ interface ServicePageClientProps {
 export function ServicePageClient({ service }: ServicePageClientProps) {
   const router = useRouter();
   const t = useTranslations("servicePage");
+  const t_services = useTranslations("services");
 
   return (
     <div className="min-h-screen">
@@ -72,7 +73,7 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
             style={{ fontFamily: "var(--font-family-display)" }}
           >
-            <span className="gradient-text">{service.title}</span>
+            <span className="gradient-text">{t_services(`cards.${service.slug}.title`)}</span>
           </motion.h1>
 
           {/* Description */}
@@ -82,7 +83,7 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-stage-muted max-w-3xl mx-auto"
           >
-            {service.shortDescription}
+            {t_services(`cards.${service.slug}.description`)}
           </motion.p>
 
           {/* Back Button */}

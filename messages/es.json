@@ -16,7 +16,10 @@
   "hero": {
     "tagline": "Tour Management · Producción · Logística",
     "headline": "La solución a todos los problemas de tu gira",
-    "highlightWords": ["solución", "gira"],
+    "highlightWords": [
+      "solución",
+      "gira"
+    ],
     "mantra": "¡Nunca problemas, sólo soluciones!",
     "cta": "Hablemos",
     "yearsValue": "15+",
@@ -32,7 +35,29 @@
     "title": "Nuestros",
     "titleHighlight": "Servicios",
     "subtitle": "Cinco pilares de excelencia operativa que cubren cada aspecto de tu producción en vivo.",
-    "moreInfo": "Más información"
+    "moreInfo": "Más información",
+    "cards": {
+      "tour-manager": {
+        "title": "Tour Manager",
+        "description": "Gestión integral de giras nacionales e internacionales. El adulto de la gira que convierte el caos en precisión."
+      },
+      "produccion-estadios": {
+        "title": "Producción de Estadios y Arenas",
+        "description": "Palau Sant Jordi, Estadi Olímpic y más. Producción a gran escala con estándares internacionales."
+      },
+      "logistica-festivales": {
+        "title": "Logística de Festivales",
+        "description": "Primavera Sound, Sónar, Cruïlla. Coordinación de escenarios, artistas y operaciones en tiempo real."
+      },
+      "merchandising": {
+        "title": "Merchandising",
+        "description": "Gestión completa de merchandising oficial: diseño, producción, logística y venta en gira."
+      },
+      "vehiculos": {
+        "title": "Vehículos",
+        "description": "Flota propia de vehículos para transporte de equipos, backline y personal técnico."
+      }
+    }
   },
   "hallOfFame": {
     "tagline": "Hall of Fame",
@@ -103,5 +128,9 @@
     "contactUs": "Contáctanos para discutir cómo podemos ayudarte con tu proyecto",
     "cta": "Hablemos",
     "notFound": "Servicio no encontrado"
+  },
+  "schema": {
+    "organizationDescription": "Agencia de Tour Management, producción de estadios y logística de festivales en Barcelona.",
+    "serviceDescription": "Servicios profesionales de Tour Management, producción de conciertos en estadios y arenas, logística de festivales, merchandising y vehículos."
   }
 }
