@@ -25,7 +25,7 @@ export function ServicePageClient({ service }: ServicePageClientProps) {
           <div className="absolute inset-0 z-0">
             <Image
               src={service.heroImage}
-              alt={service.title}
+              alt=""
               fill
               className="object-cover opacity-30"
               priority
